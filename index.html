@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123e35">
+  <title>វិទ្យាយអធិបតី · AKTHIPAKDEI • ប្រព័ន្ធគ្រប់គ្រងថ្នាក់រៀន</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="navigation" class="sidebar" aria-label="ម៉ឺនុយចម្បង">
+    <div class="sidebar-header">
+      <a class="brand" href="./">
+        <span class="logo">អ</span>
+        <span>វិទ្យាល័យអធិបតី
+            <!-- <small>AKTHIPAKDEI</small> -->
+        </span>
+      </a>
+      <button id="navClose" class="nav-close" aria-label="បិទម៉ឺនុយ">×</button>
+    </div>
+    <div class="nav-label admin-only">WORKSPACE</div>
+    <button class="nav admin-only" id="cardsWorkspace">▦ <span>តំណភ្ជាប់/Links</span></button>
+    <button id="tagsWorkspace" class="nav admin-only" aria-pressed="false">⌑ <span>ស្លាក/Tags</span></button>
+    <button id="settingsWorkspace" class="nav admin-only" aria-pressed="false">⚙ <span>ការកំណត់/Settings</span></button>
+    <button class="nav active" id="allClasses">បង្ហាញទាំងអស់</button>
+    <div class="nav-label tag-heading">ស្លាក / TAGS</div>
+    <div id="tags"></div>
+    <div class="sidebar-bottom">
+      <!-- <span class="status-dot"></span> JSON · GitHub Pages ready -->
+      <small>សាមញ្ញ • រហ័ស • ងាយស្រួល</small>
+    </div>
+  </aside>
+
+  <div id="navBackdrop" class="nav-backdrop" hidden></div>
+
+  <main id="mainContent">
+    <header>
+      <button id="navToggle" class="nav-toggle" aria-controls="navigation" aria-expanded="true" aria-label="បិទម៉ឺនុយ">☰</button>
+      <div id="activeMenuTitle" class="breadcrumb" aria-live="polite">បង្ហាញទាំងអស់</div>
+      <div class="header-actions">
+        <button id="logout" class="subtle" hidden>ចាកចេញ</button>
+        <button id="headerSave" class="primary" hidden title="ទាញយក Json">↓ Save Json Update Your change</button>
+        <div class="desktop-header-menu">
+          <div class="header-menu-content">
+            <button class="install-button subtle">↓ ដំឡើង Chrome App</button>
+            <div class="mode-switch">
+              <button class="mode-button" data-mode="viewer" aria-pressed="true">អ្នកមើល</button>
+              <button class="mode-button" data-mode="admin" aria-pressed="false">អ្នកគ្រប់គ្រង</button>
+            </div>
+          </div>
+        </div>
+        <details id="headerMenu" class="header-menu">
+          <summary class="header-menu-toggle" aria-label="បើកម៉ឺនុយ">☰</summary>
+          <div class="header-menu-content">
+            <button class="install-button subtle">↓ ដំឡើង Chrome App</button>
+            <div class="mode-switch">
+              <button class="mode-button" data-mode="viewer" aria-pressed="true">អ្នកមើល</button>
+              <button class="mode-button" data-mode="admin" aria-pressed="false">អ្នកគ្រប់គ្រង</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <div class="container" style="min-height: calc(100vh - 200px);">
+      <section id="hero" class="hero">
+        <div>
+          <h1>🎓 ប្រព័ន្ធគ្រប់គ្រងវិទ្យាល័យអធិបតី</h1>
+          <h3>ប្រព័ន្ធគ្រប់គ្រងពិន្ទុ និងវត្តមានសិស្សសម្រាប់ថ្នាក់ទី៧ ដល់ថ្នាក់ទី១២ (Google Sheet)</h3>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-sheet">
+            <span>▦</span>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <b class="art-check">✓</b>
+          <span class="art-star">✦</span>
+        </div>
+      </section>
+  
+      <section id="stats" class="stats">
+        <div>
+          <span class="stat-icon">▦</span>
+          <p>
+            <strong id="classCount">0</strong>
+            <span>តំណភ្ជាប់សរុប</span>
+          </p>
+        </div>
+        <div>
+          <span class="stat-icon peach">⌑</span>
+          <p>
+            <strong id="tagCount">0</strong>
+            <span>ស្លាកសរុប</span>
+          </p>
+        </div>
+        <div>
+          <span class="stat-icon lilac">↗</span>
+          <p>
+            <strong>Quick Links</strong>
+            <span>តំណភ្ជាប់ថ្នាក់រៀន</span>
+          </p>
+        </div>
+      </section>
+  
+      <section id="settingsPanel" class="presentation-settings" hidden aria-label="ការកំណត់សម្រាប់អ្នកមើល">
+        <div>
+          <h2>ការបង្ហាញសម្រាប់អ្នកមើល</h2>
+          <p>ជ្រើសរើសផ្នែកដែលអ្នកមើលអាចមើលឃើញ។</p>
+        </div>
+        <div class="presentation-switches">
+          <label><input id="showHero" type="checkbox" checked role="switch"> បង្ហាញ Hero</label>
+          <label><input id="showStats" type="checkbox" checked role="switch"> បង្ហាញ Stats</label>
+          <label><input id="showSearch" type="checkbox" checked role="switch"> បង្ហាញ Search</label>
+        </div>
+      </section>
+  
+      <section id="classWorkspace" class="collection">
+        <div class="section-title" style="margin-bottom: 10px; margin-top: 10px;">
+          <div id="collectionIntro">
+            <h2 id="collectionTitle">ថ្នាក់រៀនទាំងអស់</h2>
+          </div>
+          <div class="creation-actions admin-only">
+            <button id="addClass" class="primary">＋ បង្កើតថ្នាក់រៀន</button>
+          </div>
+        </div>
+        <div id="searchToolbar" class="toolbar">
+          <label class="search">
+            <span>⌕</span>
+            <input id="search" type="search" placeholder="ស្វែងរកថ្នាក់រៀន…" aria-label="ស្វែងរកថ្នាក់រៀន">
+          </label>
+          <span class="sort">↕ ឈ្មោះថ្នាក់ A–Z</span>
+        </div>
+        <div id="grid"></div>
+        <div id="empty" hidden class="empty">
+          មិនមានថ្នាក់រៀនទេ។ <span>សាកល្បងស្វែងរកម្ដងទៀត ឬបង្កើតថ្នាក់ថ្មី។</span>
+        </div>
+      </section>
+  
+      <section id="tagWorkspace" hidden>
+        <div class="section-title">
+          <div>
+            <div class="eyebrow tag-eyebrow">TAG WORKSPACE</div>
+            <h2>គ្រប់គ្រងស្លាក</h2>
+            <p>បង្កើត កែប្រែ ប្ដូរឈ្មោះ លុប និងរៀបលំដាប់ស្លាក។</p>
+          </div>
+          <button id="workspaceAddTag" class="primary">＋ បង្កើត Tag</button>
+        </div>
+        <div class="tag-order-note">
+          ប្រើ ↑ និង ↓ ដើម្បីប្ដូរលំដាប់។ លំដាប់នេះប្រើនៅរបារចំហៀង និងក្នុងទម្រង់ជ្រើសរើសស្លាក។
+        </div>
+        <div id="tagManager" aria-label="បញ្ជីគ្រប់គ្រងស្លាក"></div>
+        <p id="noTags" class="empty" hidden>មិនទាន់មានស្លាក។ ចុច បង្កើត Tag ដើម្បីចាប់ផ្តើម។</p>
+      </section>
+  
+      <section class="data-panel admin-only">
+        <div>
+          <h3>គ្រប់គ្រងទិន្នន័យ JSON</h3>
+          <p>
+            កែប្រែរួច ចុច Save Json Update Your change នៅ header ដើម្បីទាញយក data.json។
+            ការកែប្រែមិនរក្សាទុកក្នុង browser ទេ។ ដាក់ជំនួស data.json លើ GitHub ដើម្បីផ្សព្វផ្សាយ។
+          </p>
+        </div>
+        <div class="data-buttons">
+          <button id="export">↓ រក្សាទុក JSON (Export)</button>
+          <button id="import">↑ Import JSON</button>
+          <input id="file" type="file" accept="application/json,.json" hidden>
+          <button id="reset">ទាញយកទិន្នន័យដើម</button>
+        </div>
+        <small id="importStatus" class="import-status" role="status" aria-live="polite">No JSON file imported.</small>
+        <div class="github-upload">
+          <label for="githubToken">GitHub fine-grained token (Contents: Read and write)</label>
+          <input id="githubToken" type="password" autocomplete="off" spellcheck="false" placeholder="Enter token for damrongteacher/Akthipakdei2026-2027">
+          <button id="uploadGithub" type="button">↑ Upload data.json to GitHub</button>
+          <small id="githubUploadStatus" role="status" aria-live="polite">Uploads the current data.json to the main branch. The token is used only for this upload and is not saved.</small>
+        </div>
+        <small>
+          Admin mode ជាមុខងារកែប្រែប៉ុណ្ណោះ មិនមែនជាប្រព័ន្ធសុវត្ថិភាពចូលគណនីទេ។
+          ការចូលប្រើតំណ អាស្រ័យលើការកំណត់របស់គេហទំព័រនីមួយៗ។
+        </small>
+      </section>
+  
+    </div>
+    <footer>
+      <span>វិទ្យាយអធិបតី · AKTHIPAKDEI</span>
+      <span>រៀបចំបានល្អ បង្រៀនបានកាន់តែងាយស្រួល</span>
+    </footer>
+  </main>
+
+  <dialog id="loginDialog" aria-labelledby="loginTitle">
+    <form id="loginForm">
+      <div class="dialog-heading">
+        <h2 id="loginTitle">ចូលជាអ្នកគ្រប់គ្រង</h2>
+        <button type="button" class="close" data-close aria-label="បិទ">×</button>
+      </div>
+      <label>
+        ឈ្មោះអ្នកប្រើប្រាស់
+        <input id="loginUsername" name="username" autocomplete="username" required autofocus>
+      </label>
+      <label>
+        ពាក្យសម្ងាត់
+        <input id="loginPassword" name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <p id="loginError" class="error" role="alert"></p>
+      <div class="dialog-actions">
+        <button type="button" data-close>បោះបង់</button>
+        <button class="primary" type="submit">ចូល</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="classDialog">
+    <form id="classForm">
+      <div class="dialog-heading">
+        <h2 id="dialogTitle">បង្កើតថ្នាក់រៀន</h2>
+        <button type="button" class="close" data-close>×</button>
+      </div>
+      <label>
+        ឈ្មោះថ្នាក់
+        <input id="className" required maxlength="100" placeholder="Class7A">
+      </label>
+      <label>
+        តំណភ្ជាប់
+        <input id="classLink" type="url" required placeholder="https://example.com/…">
+      </label>
+      <label>
+        ឈ្មោះប៊ូតុង
+        <input id="buttonName" maxlength="100" value="បើកថ្នាក់រៀន" placeholder="បើកថ្នាក់រៀន">
+      </label>
+      <section class="teacher-field">
+        <label id="teacherLabel">ព័ត៌មានគ្រូបង្រៀន</label>
+        <div class="editor-toolbar" role="toolbar" aria-label="ទ្រង់ទ្រាយអត្ថបទ">
+          <button type="button" data-format="bold" aria-label="អក្សរដិត"><b>B</b></button>
+          <button type="button" data-format="italic" aria-label="អក្សរទ្រេត"><i>I</i></button>
+          <button type="button" data-format="underline" aria-label="គូសបន្ទាត់ក្រោម"><u>U</u></button>
+          <button type="button" data-format="insertUnorderedList" aria-label="បញ្ជីចំណុច">• បញ្ជី</button>
+          <button type="button" data-format="insertOrderedList" aria-label="បញ្ជីលេខ">1. បញ្ជី</button>
+          <button type="button" data-format="removeFormat" aria-label="សម្អាតទ្រង់ទ្រាយ">សម្អាត</button>
+        </div>
+        <div id="teacherInfo" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="teacherLabel" data-placeholder="ឈ្មោះគ្រូ មុខវិជ្ជា និងព័ត៌មានទំនាក់ទំនង…"></div>
+      </section>
+      <fieldset>
+        <legend>ជ្រើសរើសស្លាក</legend>
+        <div id="tagChoices"></div>
+      </fieldset>
+      <p id="formError" class="error" role="alert"></p>
+      <div class="dialog-actions">
+        <button type="button" data-close>បោះបង់</button>
+        <button class="primary" type="submit">រក្សាទុក</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="tagDialog">
+    <form id="tagForm">
+      <div class="dialog-heading">
+        <h2 id="tagDialogTitle">បង្កើត Tag</h2>
+        <button type="button" class="close" data-close>×</button>
+      </div>
+      <label>
+        ឈ្មោះស្លាក
+        <input id="tagName" required maxlength="50" placeholder="Class7">
+      </label>
+      <label>
+        ការពិពណ៌នា (មិនចាំបាច់)
+        <textarea id="tagDescription" maxlength="500" rows="3" placeholder="ព័ត៌មានបន្ថែមអំពីស្លាកនេះ…"></textarea>
+      </label>
+      <p id="tagError" class="error" role="alert"></p>
+      <div class="dialog-actions">
+        <button type="button" data-close>បោះបង់</button>
+        <button class="primary">រក្សាទុក</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="installDialog">
+    <div class="dialog-heading">
+      <h2>Chrome App</h2>
+      <button class="close" data-close>×</button>
+    </div>
+    <p>បើកគេហទំព័រនេះក្នុង Chrome តាម HTTPS។ ចុចម៉ឺនុយ ⋮ → Cast, save and share → Install page as app (ឬ Install app)។</p>
+    <p>នៅលើ Android៖ ⋮ → Add to Home screen → Install។</p>
+    <p>អ្នកក៏អាចទាញយក shortcut សម្រាប់បើកគេហទំព័រនេះបាន។</p>
+    <button id="shortcut" class="primary">↓ Download shortcut (.url)</button>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+
+  <script src="app.js" defer></script>
+  <script src="navigation.js" defer></script>
+</body>
+</html>

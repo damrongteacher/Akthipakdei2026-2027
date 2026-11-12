@@ -1,0 +1,205 @@
+
+{
+  "version": 1,
+  "tags": [
+    {
+      "id": "grade7",
+      "name": "ថ្នាក់ទី៧",
+      "description": ""
+    },
+    {
+      "id": "grade8",
+      "name": "ថ្នាក់ទី៨",
+      "description": ""
+    },
+    {
+      "id": "grade9",
+      "name": "ថ្នាក់ទី៩",
+      "description": ""
+    },
+    {
+      "id": "grade10",
+      "name": "ថ្នាក់ទី១០",
+      "description": ""
+    },
+    {
+      "id": "grade11",
+      "name": "ថ្នាក់ទី១១",
+      "description": ""
+    },
+    {
+      "id": "grade12",
+      "name": "ថ្នាក់ទី១២",
+      "description": ""
+    }
+  ],
+  
+  "classes": [
+    {
+      "id": "7a",
+      "name": "ថ្នាក់ទី៧ A",
+      "link": "https://docs.google.com/spreadsheets/d/1DikDdwocE6Xce5IqfkkrkrMkfJOl3ZVephO73YZjzWQ/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade7"]
+    },
+    {
+      "id": "7b",
+      "name": "ថ្នាក់ទី៧ B",
+      "link": "https://docs.google.com/spreadsheets/d/1aYk95rM6EIsUIftGNQnOQO_pKvOKaL3G8YQ4m--fkeI/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade7"]
+    },
+    {
+      "id": "7c",
+      "name": "ថ្នាក់ទី៧ C",
+      "link": "https://docs.google.com/spreadsheets/d/1y86T0I2sX08_Jpx9-HFnJsH6RVvjMfQQR0rfyBNyGD0/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade7"]
+    },
+    {
+      "id": "7d",
+      "name": "ថ្នាក់ទី៧ D",
+      "link": "https://docs.google.com/spreadsheets/d/1s8yr8HQtZUYxOH4jIAqabTaJ3QeUWHhY2OyXKF_x84I/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade7"]
+    },
+    {
+      "id": "7e",
+      "name": "ថ្នាក់ទី៧ E",
+      "link": "https://docs.google.com/spreadsheets/d/1u-WaIly1buIpQ5iztY89tIo765UCUZdVFVndOcgQA70/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade7"]
+    },
+    {
+      "id": "8a",
+      "name": "ថ្នាក់ទី៨ A",
+      "link": "https://docs.google.com/spreadsheets/d/18nUphL_3XVS1eHzVvDFfNlnLIvWVDAmePrjTuR_7xMU/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade8"]
+    },
+    {
+      "id": "8b",
+      "name": "ថ្នាក់ទី៨ B",
+      "link": "https://docs.google.com/spreadsheets/d/191UbmVpI8xqBiFfCxhhQ_6Yi6lGl201t99hnUdypzI4/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade8"]
+    },
+    {
+      "id": "8c",
+      "name": "ថ្នាក់ទី៨ C",
+      "link": "https://docs.google.com/spreadsheets/d/1ppyp4L77PsTwcyOuTGAtY9vXJIVAf4CGW0a5FHHFzwA/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade8"]
+    },
+    {
+      "id": "8d",
+      "name": "ថ្នាក់ទី៨ D",
+      "link": "https://docs.google.com/spreadsheets/d/1w_HfyKBNl9bkL_47SW3SOk9J2-33r85eIz3dLTeed4Y/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade8"]
+    },
+    {
+      "id": "9a",
+      "name": "ថ្នាក់ទី៩ A",
+      "link": "https://docs.google.com/spreadsheets/d/1m__27UHyEdIEsIXxMPjU4Lsk5Zw23og17XWfSK0qUBY/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade9"]
+    },
+    {
+      "id": "9b",
+      "name": "ថ្នាក់ទី៩ B",
+      "link": "https://docs.google.com/spreadsheets/d/1F5pJ_FC_TmtZJhFUyVkPQ7XZFVGf0cWQoFHdIah6Lug/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade9"]
+    },
+    {
+      "id": "9c",
+      "name": "ថ្នាក់ទី៩ C",
+      "link": "https://docs.google.com/spreadsheets/d/1PPAOW537MkYr8PFKZW4LkyBVlKtFC96p9NIBEcDSRl0/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade9"]
+    },
+    {
+      "id": "10a",
+      "name": "ថ្នាក់ទី១០ A",
+      "link": "https://docs.google.com/spreadsheets/d/1-uZYS1DqfeheQA7HPYpt2ONbKq6ecdcAf4cFqsH9CwI/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade10"]
+    },
+    {
+      "id": "10b",
+      "name": "ថ្នាក់ទី១០ B",
+      "link": "https://docs.google.com/spreadsheets/d/1aeHGB2J3egmxCQZGd_EWY4JPjL_ji3H5_DBX7zWldCY/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade10"]
+    },
+    {
+      "id": "10c",
+      "name": "ថ្នាក់ទី១០ C",
+      "link": "https://docs.google.com/spreadsheets/d/1gcoi8Kt5iSnp5tmDh3MZrzSnpy694868LxZ2GwMaUMI/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade10"]
+    },
+    {
+      "id": "11a",
+      "name": "ថ្នាក់ទី១១ A",
+      "link": "https://docs.google.com/spreadsheets/d/1Rvx-fEU2YLvr3DN2-CYreNVbEk8OwWeTHS_PwFM-N8c/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade11"]
+    },
+    {
+      "id": "11b",
+      "name": "ថ្នាក់ទី១១ B",
+      "link": "https://docs.google.com/spreadsheets/d/1Wi2L99O8GVIM7VfL1z-dxw6rRaSH5n2XZi8MACB9sKM/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade11"]
+    },
+    {
+      "id": "12a",
+      "name": "ថ្នាក់ទី១២ A",
+      "link": "https://docs.google.com/spreadsheets/d/1pW7KMJ3PBFKfzgD8N7X_SOr3PBVq9ufvagnxBJfMoBk/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade12"]
+    },
+    {
+      "id": "12b",
+      "name": "ថ្នាក់ទី១២ B",
+      "link": "https://docs.google.com/spreadsheets/d/1SkTIMI_VF73GxKy7jFccNkoVsHPoUXYiTUHp565jMpI/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade12"]
+    },
+    {
+      "id": "12c",
+      "name": "ថ្នាក់ទី១២ C",
+      "link": "https://docs.google.com/spreadsheets/d/1s9HfL_q28E2GrK4fCeIe0F_odYHFMbRJC4kmNxNGBUs/edit?gid=411616520#gid=411616520",
+      "buttonName": "បើកថ្នាក់រៀន",
+      "teacherInfo": "",
+      "tags": ["grade12"]
+    }
+  ],
+
+  "settings": {
+    "showHero": true,
+    "showStats": false,
+    "showSearch": false
+  }
+}
