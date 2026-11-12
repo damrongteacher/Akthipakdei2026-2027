@@ -88,7 +88,7 @@ function render(){
 function createClassCard(c){const card=node('article','card');const badges=node('div','badges admin-only');c.tags.forEach(id=>badges.append(node('span','badge',data.tags.find(t=>t.id===id).name)));const link=node('a','open-link',c.buttonName||'បើកថ្នាក់រៀន');link.href=c.link;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',(c.buttonName||'បើកថ្នាក់រៀន')+' — '+c.name);link.dataset.className=c.name;card.append(node('h3','',c.name),badges);if(c.teacherInfo){const info=node('div','teacher-info');info.innerHTML=sanitizeTeacher(c.teacherInfo);card.append(info)}card.append(link);const actions=node('div','card-actions admin-only');actions.append(button('✎ កែប្រែ',()=>openClass(c)),button('លុប',()=>{if(admin&&confirm('លុបថ្នាក់ '+c.name+'?')){data.classes=data.classes.filter(x=>x.id!==c.id);persist()}}));card.append(actions);return card;}
 function renderPresentation(){
  const settings=data.settings||{showHero:true,showStats:true,showSearch:true};
- $('hero').hidden=admin?workspace!=='settings':!settings.showHero;$('stats').hidden=admin?workspace!=='settings':!settings.showStats;$('searchToolbar').hidden=!admin&&!settings.showSearch;
+ $('hero').hidden=admin?workspace!=='settings':!settings.showHero||selected!==null;$('stats').hidden=admin?workspace!=='settings':!settings.showStats;$('searchToolbar').hidden=!admin&&!settings.showSearch;
  $('showHero').checked=settings.showHero;$('showStats').checked=settings.showStats;$('showSearch').checked=settings.showSearch;
 }
 function updatePresentation(){if(!admin)return;data.settings={showHero:$('showHero').checked,showStats:$('showStats').checked,showSearch:$('showSearch').checked};persist()}
