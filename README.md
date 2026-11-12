@@ -36,4 +36,4 @@ Username: admin. Password: admin. Switching to Viewer preserves the admin login;
 
 Admin navigation includes Card, Tags and Setting. Setting contains Hero, Stats and Search switches. Both viewers and admins have Show all and tag filters. Leaving with edits that have not been exported triggers a browser warning.
 
-In Admin mode, Hero and Stats appear only in the Setting workspace. Viewer visibility continues to follow the saved showHero/showStats settings.
+In Admin mode, Hero and Stats appear only in the Setting workspace. For viewers, Hero appears only on “បង្ហាញទាំងអស់” when showHero is enabled; Stats visibility follows the saved showStats setting.
