@@ -32,7 +32,7 @@ async function uploadToGithub(){
  if(!admin)throw Error('សូមចូលជា Admin ដើម្បីបង្ហោះទិន្នន័យ។');
  const token=$('githubToken').value.trim();
  if(!token)throw Error('សូមបញ្ចូល GitHub fine-grained token។');
- const endpoint='https://api.github.com/repos/damrongteacher/Athipatey2026-2027/contents/data.json';
+ const endpoint='https://api.github.com/repos/damrongteacher/Akthipakdei2026-2027/contents/data.json';
  const headers={Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28'};
  let read;
  try{read=await fetch(`${endpoint}?ref=main`,{headers})}catch{throw Error('មិនអាចភ្ជាប់ទៅ GitHub API បានទេ។ សូមពិនិត្យអ៊ីនធឺណិត ហើយប្រើគេហទំព័រ HTTPS ឬ localhost។')}
@@ -60,7 +60,7 @@ async function uploadToGithub(){
  }
  dirty=false;
  render();
- try{await fetch('https://api.github.com/repos/damrongteacher/Athipatey2026-2027/pages/builds',{method:'POST',headers})}catch{}
+ try{await fetch('https://api.github.com/repos/damrongteacher/Akthipakdei2026-2027/pages/builds',{method:'POST',headers})}catch{}
  $('githubToken').value='';
  $('githubUploadStatus').textContent='បានបង្ហោះ data.json ទៅ GitHub និងស្នើឱ្យ rebuild Pages។';
  toast('បានបង្ហោះ data.json ទៅ GitHub។');
@@ -162,7 +162,7 @@ $('import').onclick=()=>$('file').click();$('file').onchange=async()=>{const fil
 $('reset').onclick=async()=>{if(!confirm('អាន data.json ពីគេហទំព័រឡើងវិញ? សូមរក្សាទុក JSON ដែលបានកែប្រែជាមុន។'))return;try{const next=await published();data=next;selected=null;dirty=false;$('importStatus').textContent='No JSON file imported.';render();toast('បានទាញយកទិន្នន័យពីគេហទំព័រ។')}catch(error){toast(error.message)}};
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e});window.addEventListener('appinstalled',()=>{installPrompt=null;toast('បានដំឡើង App។')});
 document.querySelectorAll('.install-button').forEach(button=>button.addEventListener('click',async()=>{if(installPrompt){await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}else $('installDialog').showModal()}));
-$('shortcut').onclick=()=>{const url=new URL('./',location.href);download('[InternetShortcut]\r\nURL='+url.href+'\r\n','ATHIPATEY.url','application/octet-stream')};
+$('shortcut').onclick=()=>{const url=new URL('./',location.href);download('[InternetShortcut]\r\nURL='+url.href+'\r\n','Akthipakdei2026-2027.url','application/octet-stream')};
 async function init(){
  // Remove drafts created by older versions; never load or write browser data.
  try{localStorage.removeItem(KEY)}catch{}

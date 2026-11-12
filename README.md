@@ -1,4 +1,4 @@
-# ATHIPATEY Classroom Hub
+# Akthipakdei2026-2027 Classroom Hub
 
 Static Khmer classroom directory for GitHub Pages. HTML, CSS, JavaScript and JSON; no database or build dependencies.
 
